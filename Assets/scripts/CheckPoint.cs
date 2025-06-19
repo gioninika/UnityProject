@@ -6,11 +6,12 @@ public class Checkpoint : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            PlayerCheckpointHandler checkpointHandler = other.GetComponent<PlayerCheckpointHandler>();
-            if (checkpointHandler != null)
+            PlayerCheckpointHandler handler = other.GetComponent<PlayerCheckpointHandler>();
+            if (handler != null)
             {
-                checkpointHandler.SetCheckpoint(transform.position);
+                handler.SetCheckpoint(transform.position, gameObject);
             }
         }
     }
 }
+
