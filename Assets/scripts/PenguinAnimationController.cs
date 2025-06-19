@@ -4,7 +4,6 @@ using UnityEngine;
 public class HeroNightAnimationController : MonoBehaviour
 {
     [SerializeField] private float speed;
-    [SerializeField] private float JumpForce;
     private SpriteRenderer _rend;
     private Animator _anim;
     void Start()
@@ -32,14 +31,5 @@ public class HeroNightAnimationController : MonoBehaviour
             _rend.flipX = true;
             _anim.SetBool("Run", true);
         }
-        if (Input.GetKey(KeyCode.Space))
-        {
-            Jump();
-        }
     }
-    void Jump()
-    {
-        _anim.SetTrigger("Jump");
-    }
-    
 }
