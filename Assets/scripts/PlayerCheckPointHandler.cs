@@ -2,19 +2,20 @@ using UnityEngine;
 
 public class PlayerCheckpointHandler : MonoBehaviour
 {
-    public static GameObject Instance;
+    public static PlayerCheckpointHandler Instance;
     private Vector3 lastCheckpointPosition;
     private Rigidbody2D rb;
-
     private const string CheckpointPosKey = "LastCheckpoint";
     private const string CheckpointNameKey = "LastCheckpointName";
-
     private GameObject lastCheckpointObj;
+    private Animator anim;
+    private bool isRespawning = false;
 
     void Start()
     {
+        Instance = this;
         rb = GetComponent<Rigidbody2D>();
-
+        anim = GetComponent<Animator>();
         if (PlayerPrefs.HasKey(CheckpointPosKey))
         {
             string pos = PlayerPrefs.GetString(CheckpointPosKey);
@@ -28,7 +29,7 @@ public class PlayerCheckpointHandler : MonoBehaviour
                 if (found != null)
                 {
                     lastCheckpointObj = found;
-                    lastCheckpointObj.SetActive(false); // keep it deactivated
+                    lastCheckpointObj.SetActive(false);
                 }
             }
 
@@ -42,14 +43,14 @@ public class PlayerCheckpointHandler : MonoBehaviour
 
     public void SetCheckpoint(Vector3 pos, GameObject checkpointObject)
     {
-        // Reactivate the last one if it exists
+
         if (lastCheckpointObj != null)
         {
             lastCheckpointObj.SetActive(true);
         }
 
         lastCheckpointObj = checkpointObject;
-        lastCheckpointObj.SetActive(false); // deactivate new one
+        lastCheckpointObj.SetActive(false);
 
         lastCheckpointPosition = pos;
 

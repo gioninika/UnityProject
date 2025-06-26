@@ -4,8 +4,8 @@ public class Attack : MonoBehaviour
 {
     [SerializeField] private float detectionDistance;
     [SerializeField] private LayerMask enemyLayer;
+    [SerializeField] float offsetDown;
     private Animator _anim;
-
     private float _direction = 1f;
 
     void Start()
@@ -34,7 +34,7 @@ public class Attack : MonoBehaviour
 
     private void DrawRay()
     {
-        Debug.DrawRay(transform.position, Vector2.right * _direction * detectionDistance, Color.green);
+        Debug.DrawRay(transform.position + Vector3.down * offsetDown, Vector2.right * _direction * detectionDistance, Color.green);
     }
 
     public void AttackEnemy()
