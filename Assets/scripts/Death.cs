@@ -5,27 +5,21 @@ public class Death : MonoBehaviour
 {
     [SerializeField] private float deathPoint;
     private PlayerCheckpointHandler playerCheckpointHandler;
-    private Rigidbody2D rb;
-    private Animator anim;
+    private bool isDead;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
         playerCheckpointHandler = GetComponent<PlayerCheckpointHandler>();
     }
 
     void Update()
     {
-        if (transform.position.y < deathPoint)
+        if (transform.position.y < deathPoint && !isDead)
         {
-            RespawnCoroutine();
+            isDead = true;
+            playerCheckpointHandler.Respawn();
+            isDead = false;
+            BackgroundFollow.Instance.JumpFollow();
         }
-    }
-    private IEnumerator RespawnCoroutine()
-    {
-        anim.SetTrigger("Death");
-        yield return new WaitForSeconds(3f);
-        playerCheckpointHandler.Respawn();
     }
 }

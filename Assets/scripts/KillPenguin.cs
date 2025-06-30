@@ -7,6 +7,7 @@ public class KillPenguin : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             PlayerCheckpointHandler.Instance.Respawn();
+            BackgroundFollow.Instance.JumpFollow();
         }
     }
 
