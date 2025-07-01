@@ -292,11 +292,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 451f0ac2022dc2b4894b3bee7d637512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionDistance: 0.9
+  detectionDistance: 1
   enemyLayer:
     serializedVersion: 2
     m_Bits: 8
-  offsetDown: 0.35
+  offsetDown: 0.45
 --- !u!114 &2974186284312756367
 MonoBehaviour:
   m_ObjectHideFlags: 0
