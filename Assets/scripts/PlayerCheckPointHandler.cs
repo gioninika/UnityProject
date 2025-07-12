@@ -9,7 +9,6 @@ public class PlayerCheckpointHandler : MonoBehaviour
     private const string CheckpointNameKey = "LastCheckpointName";
     private GameObject lastCheckpointObj;
     private Animator anim;
-    private bool isRespawning = false;
 
     void Start()
     {
@@ -72,13 +71,5 @@ public class PlayerCheckpointHandler : MonoBehaviour
         s = s.Trim('(', ')');
         string[] parts = s.Split(',');
         return new Vector3(float.Parse(parts[0]), float.Parse(parts[1]), float.Parse(parts[2]));
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            Respawn();
-        }
     }
 }
