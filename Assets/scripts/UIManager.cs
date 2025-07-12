@@ -38,7 +38,7 @@ public class UIManager : MonoBehaviour
 
     void MainMenu()
     {
-        // Load main menu scene
+        
     }
 
     void Pause()

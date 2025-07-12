@@ -17,16 +17,13 @@ public class PenguinAnimationController : MonoBehaviour
     {
         if (UIManager.IsGamePaused)
         {
-            // Don't do anything if the game is paused
             return;
         }
 
         var input = Input.GetAxisRaw("Horizontal");
 
-        // Move the character
         transform.Translate(Vector2.right * input * Time.deltaTime * speed);
 
-        // Flip and animate
         if (input > 0)
         {
             _rend.flipX = false;
