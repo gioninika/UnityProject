@@ -1,10 +1,10 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
     public static bool IsGamePaused = false;
-
     public GameObject PauseMenu;
     public GameObject Canvas;
     public GameObject Camera;
@@ -16,6 +16,7 @@ public class UIManager : MonoBehaviour
 
     void Awake()
     {
+        IsGamePaused = false;
         Canvas.SetActive(true);
     }
 
@@ -38,7 +39,8 @@ public class UIManager : MonoBehaviour
 
     void MainMenu()
     {
-        
+        IsGamePaused = false;
+        SceneManager.LoadScene("MainMenu"); 
     }
 
     void Pause()
