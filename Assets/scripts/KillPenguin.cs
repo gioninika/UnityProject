@@ -10,5 +10,4 @@ public class KillPenguin : MonoBehaviour
             BackgroundFollow.Instance.JumpFollow();
         }
     }
-
 }

@@ -266,6 +266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  SpawnPoint: {fileID: 0}
 --- !u!114 &1914501855481696201
 MonoBehaviour:
   m_ObjectHideFlags: 0

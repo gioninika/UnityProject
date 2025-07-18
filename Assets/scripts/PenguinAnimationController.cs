@@ -6,11 +6,12 @@ public class PenguinAnimationController : MonoBehaviour
     [SerializeField] private float speed = 5f;
     private SpriteRenderer _rend;
     private Animator _anim;
-
+    [SerializeField] private Transform SpawnPoint;
     void Start()
     {
         _rend = GetComponent<SpriteRenderer>();
         _anim = GetComponent<Animator>();
+        transform.position = SpawnPoint.position;
     }
 
     void Update()

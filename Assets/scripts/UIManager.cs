@@ -16,6 +16,7 @@ public class UIManager : MonoBehaviour
 
     void Awake()
     {
+        Time.timeScale = 1f;
         IsGamePaused = false;
         Canvas.SetActive(true);
     }
