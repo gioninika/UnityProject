@@ -337,7 +337,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 193662198}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1998352211}
+        m_TargetAssemblyTypeName: LevelSystem, Assembly-CSharp
+        m_MethodName: OpenLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &193662198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -547,10 +559,10 @@ MonoBehaviour:
   Camera: {fileID: 1976821040}
   PlayButton: {fileID: 226632946}
   ExitButton: {fileID: 1014061793}
-  TutorialButton: {fileID: 922552314}
-  Lvl1Button: {fileID: 193662197}
-  Lvl2Button: {fileID: 1841099347}
-  Lvl3Button: {fileID: 1775270370}
+  TutorialButton: {fileID: 0}
+  Lvl1Button: {fileID: 0}
+  Lvl2Button: {fileID: 0}
+  Lvl3Button: {fileID: 0}
   penguinSpriteRenderer: {fileID: 1498260868}
 --- !u!1 &587369718
 GameObject:
@@ -1157,7 +1169,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 922552315}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1998352211}
+        m_TargetAssemblyTypeName: LevelSystem, Assembly-CSharp
+        m_MethodName: OpenLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &922552315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2331,7 +2355,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1775270371}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1998352211}
+        m_TargetAssemblyTypeName: LevelSystem, Assembly-CSharp
+        m_MethodName: OpenLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1775270371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2452,7 +2488,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1841099348}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1998352211}
+        m_TargetAssemblyTypeName: LevelSystem, Assembly-CSharp
+        m_MethodName: OpenLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1841099348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2639,6 +2687,7 @@ GameObject:
   - component: {fileID: 1998352208}
   - component: {fileID: 1998352210}
   - component: {fileID: 1998352209}
+  - component: {fileID: 1998352211}
   m_Layer: 5
   m_Name: Levels
   m_TagString: Untagged
@@ -2708,6 +2757,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1998352207}
   m_CullTransparentMesh: 1
+--- !u!114 &1998352211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998352207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 590a747eb56a69e4e98486e413c98bf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttons:
+  - {fileID: 922552314}
+  - {fileID: 193662197}
+  - {fileID: 1841099347}
+  - {fileID: 1775270370}
 --- !u!1 &2045238101
 GameObject:
   m_ObjectHideFlags: 0

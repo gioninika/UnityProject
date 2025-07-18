@@ -26,10 +26,10 @@ public class MainMenuUI : MonoBehaviour
     {
         PlayButton.onClick.AddListener(Play);
         ExitButton.onClick.AddListener(Exit);
-        TutorialButton.onClick.AddListener(Tutorial);
-        Lvl1Button.onClick.AddListener(Lvl1);
-        Lvl2Button.onClick.AddListener(Lvl2);
-        Lvl3Button.onClick.AddListener(Lvl3);
+        // TutorialButton.onClick.AddListener(Tutorial);
+        // Lvl1Button.onClick.AddListener(Lvl1);
+        // Lvl2Button.onClick.AddListener(Lvl2);
+        // Lvl3Button.onClick.AddListener(Lvl3);
     }
     public void Play()
     {
@@ -40,20 +40,20 @@ public class MainMenuUI : MonoBehaviour
     {
         Application.Quit();
     }
-    public void Tutorial()
-    {
-        SceneManager.LoadScene("Tutorial");
-    }
-    public void Lvl1()
-    {
-        SceneManager.LoadScene("LVL1");
-    }
-    public void Lvl2()
-    {
-        SceneManager.LoadScene("LVL2");
-    }
-    public void Lvl3()
-    {
-        SceneManager.LoadScene("LVL3");
-    }
+    // public void Tutorial()
+    // {
+    //     SceneManager.LoadScene("Tutorial");
+    // }
+    // public void Lvl1()
+    // {
+    //     SceneManager.LoadScene("LVL1");
+    // }
+    // public void Lvl2()
+    // {
+    //     SceneManager.LoadScene("LVL2");
+    // }
+    // public void Lvl3()
+    // {
+    //     SceneManager.LoadScene("LVL3");
+    // }
 }
