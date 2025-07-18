@@ -4,7 +4,6 @@ public class Jump : MonoBehaviour
 {
     public float jumpForce;
     public float detectionDistance;
-
     private Rigidbody2D rb;
     private bool canJump;
 

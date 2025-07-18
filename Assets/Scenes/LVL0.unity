@@ -3284,6 +3284,14 @@ PrefabInstance:
       propertyPath: SpawnPoint
       value: 
       objectReference: {fileID: 4901291943731812750}
+    - target: {fileID: 390280141215981897, guid: 8122bab25eedfe847a7699b9313654df, type: 3}
+      propertyPath: customClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b5c4125cb3d19d64fa935ea35ceb1168, type: 3}
+    - target: {fileID: 390280141215981897, guid: 8122bab25eedfe847a7699b9313654df, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 7933227629061055352}
     - target: {fileID: 5570319114685391851, guid: 8122bab25eedfe847a7699b9313654df, type: 3}
       propertyPath: m_Name
       value: penguin
@@ -3333,6 +3341,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8122bab25eedfe847a7699b9313654df, type: 3}
+--- !u!82 &7933227629061055352 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3900886211445468406, guid: 8122bab25eedfe847a7699b9313654df, type: 3}
+  m_PrefabInstance: {fileID: 7933227629061055350}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8891966990094694686
 PrefabInstance:
   m_ObjectHideFlags: 0
