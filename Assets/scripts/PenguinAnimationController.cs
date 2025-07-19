@@ -6,7 +6,6 @@ public class PenguinAnimationController : MonoBehaviour
     [SerializeField] private float speed = 5f;
     [SerializeField] private Transform SpawnPoint;
     [SerializeField] private AudioClip walkSound;  // Drag your custom sound here in Inspector
-
     private SpriteRenderer _rend;
     private Animator _anim;
     private AudioSource _audio;

@@ -283,7 +283,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpForce: 6
   detectionDistance: 1.2
-  jumpSound: {fileID: 8300000, guid: dfcdd96b9e19f6446aae6cbd7ed10dda, type: 3}
 --- !u!114 &1731154697301683558
 MonoBehaviour:
   m_ObjectHideFlags: 0

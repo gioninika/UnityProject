@@ -1,20 +1,21 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerCheckpointHandler : MonoBehaviour
 {
     public static PlayerCheckpointHandler Instance;
     private Vector3 lastCheckpointPosition;
     private Rigidbody2D rb;
-    private const string CheckpointPosKey = "LastCheckpoint";
-    private const string CheckpointNameKey = "LastCheckpointName";
     private GameObject lastCheckpointObj;
-    private Animator anim;
+
+    private string CheckpointPosKey => SceneManager.GetActiveScene().name + "_LastCheckpoint";
+    private string CheckpointNameKey => SceneManager.GetActiveScene().name + "_LastCheckpointName";
 
     void Start()
     {
         Instance = this;
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
+
         if (PlayerPrefs.HasKey(CheckpointPosKey))
         {
             string pos = PlayerPrefs.GetString(CheckpointPosKey);
@@ -42,7 +43,6 @@ public class PlayerCheckpointHandler : MonoBehaviour
 
     public void SetCheckpoint(Vector3 pos, GameObject checkpointObject)
     {
-
         if (lastCheckpointObj != null)
         {
             lastCheckpointObj.SetActive(true);
@@ -71,5 +71,14 @@ public class PlayerCheckpointHandler : MonoBehaviour
         s = s.Trim('(', ')');
         string[] parts = s.Split(',');
         return new Vector3(float.Parse(parts[0]), float.Parse(parts[1]), float.Parse(parts[2]));
+    }
+
+    public void ClearCheckpoint()
+    {
+        PlayerPrefs.DeleteKey(CheckpointPosKey);
+        PlayerPrefs.DeleteKey(CheckpointNameKey);
+        PlayerPrefs.Save();
+
+        Debug.Log("Checkpoint data cleared.");
     }
 }
